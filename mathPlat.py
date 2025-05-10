@@ -1,4 +1,4 @@
 import questions
 
-questions.generateMathQuestionsPlus
+questions.generateMathQuestionsPlusMinus()
 questions.generateMathQuestionsRazlojenie()

@@ -2,8 +2,8 @@ from random import randint
 import uuid
 def looptru(listtoloop):
     questions  = ""
-    for item in enumerate(listtoloop):
-        questions = questions + "\n" + str(item)
+    for index, item in enumerate(listtoloop):
+        questions = questions + "\n" + str(index) + "\t|" +  str(item)
     return questions
 
 def generateMathQuestions():
@@ -12,8 +12,8 @@ def generateMathQuestions():
     qus = [variant]
 
     for index in range(1, 21):
-        q1 = str(randint(1,10))
-        q2 = str(randint(1, int(q1)))
+        q1 = str(randint(2,20))
+        q2 = str(randint(1, int(q1) - 1))
         q = q1 + "=" + q2 + "+"
         evalstr = q1 + "-" + q2
         awns.append(eval(evalstr))
